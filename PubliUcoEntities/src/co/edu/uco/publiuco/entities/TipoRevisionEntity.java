@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoRevisionEntity {
+public final class TipoRevisionEntity {
 	
 	private static final TipoRevisionEntity DEFAULT_OBJECT = new TipoRevisionEntity();
 	private UUID identificador;

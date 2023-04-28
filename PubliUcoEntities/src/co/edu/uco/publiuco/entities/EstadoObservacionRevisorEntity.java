@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class EstadoObservacionRevisorEntity {
+public final class EstadoObservacionRevisorEntity {
 	
 	private static final EstadoObservacionRevisorEntity DEFAULT_OBJECT = new EstadoObservacionRevisorEntity();
 	private UUID identificador;

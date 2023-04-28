@@ -8,7 +8,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilNumber;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class CalificacionEntity {
+public final class CalificacionEntity {
 	
 	private static final CalificacionEntity DEFAULT_OBJECT = new CalificacionEntity();
 	private UUID identificador;

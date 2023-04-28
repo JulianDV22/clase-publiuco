@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoEscritorEntity {
+public final class TipoEscritorEntity {
 	
 	private static final TipoEscritorEntity DEFAULT_OBJECT = new TipoEscritorEntity();
 	private UUID identificador;

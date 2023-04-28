@@ -5,7 +5,7 @@ import java.util.UUID;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoReporteEntity {
+public final class TipoReporteEntity {
 	
 	private static final TipoReporteEntity DEFAULT_OBJECT = new TipoReporteEntity();
 	private UUID identificador;

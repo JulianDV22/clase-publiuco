@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoRelacionInstitucionEntity {
+public final class TipoRelacionInstitucionEntity {
 	
 	private static final TipoRelacionInstitucionEntity DEFAULT_OBJECT = new TipoRelacionInstitucionEntity();
 	private UUID identificador;

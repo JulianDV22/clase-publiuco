@@ -8,7 +8,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilNumber;
 import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class PlanPublicacionEntity {
+public final class PlanPublicacionEntity {
 
 	private static final PlanPublicacionEntity DEFAULT_OBJECT = new PlanPublicacionEntity();
 	private UUID identificador;

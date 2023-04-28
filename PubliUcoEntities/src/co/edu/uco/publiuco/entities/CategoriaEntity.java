@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class CategoriaEntity {
+public final class CategoriaEntity {
 	
 	private static final CategoriaEntity DEFAULT_OBJECT = new CategoriaEntity();
 	private UUID identificador;

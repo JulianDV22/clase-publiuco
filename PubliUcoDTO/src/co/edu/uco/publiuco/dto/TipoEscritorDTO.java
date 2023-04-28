@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoEscritorDTO {
+public final class TipoEscritorDTO {
 	
 	private UUID identificador;
 	private String nombre;

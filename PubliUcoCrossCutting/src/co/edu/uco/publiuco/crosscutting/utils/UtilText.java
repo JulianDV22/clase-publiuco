@@ -58,5 +58,7 @@ public final class UtilText {
 	public static final String getDefaultEmail(final String emailValue) {
 		return UtilObject.isNull(emailValue) ? DEFAULT_EMAIL : emailValue;
 	}
+	
+
 
 }

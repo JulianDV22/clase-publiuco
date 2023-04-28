@@ -6,7 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
-public class TipoIdentificacionDomain {
+public final class TipoIdentificacionDomain {
 	
 	private static final TipoIdentificacionDomain DEFAULT_OBJECT = new TipoIdentificacionDomain();
 	private UUID identificador;
