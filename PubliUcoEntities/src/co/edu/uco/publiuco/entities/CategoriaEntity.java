@@ -18,8 +18,10 @@ public class CategoriaEntity {
 	private CategoriaEntity() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setCategoriaPadre(CategoriaEntity.getDefaultObject());
 		setNombre(UtilText.EMPTY);
 		setDescripcion(UtilText.EMPTY);
+		setEstado(EstadoCategoriaEntity.getDefaultObject());
 	}
 
 	public CategoriaEntity(UUID identificador, CategoriaEntity categoriaPadre, String nombre, String descripcion,

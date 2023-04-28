@@ -6,6 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
+
 public class CategoriaDomain {
 	
 	private static final CategoriaDomain DEFAULT_OBJECT = new CategoriaDomain();
@@ -18,8 +19,10 @@ public class CategoriaDomain {
 	private CategoriaDomain() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setCategoriaPadre(CategoriaDomain.getDefaultObject());
 		setNombre(UtilText.EMPTY);
 		setDescripcion(UtilText.EMPTY);
+		setEstado(EstadoCategoriaDomain.getDefaultObject());
 	}
 
 	public CategoriaDomain(UUID identificador, CategoriaDomain categoriaPadre, String nombre, String descripcion,

@@ -6,6 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
+
 public class RevisorDomain {
 	
 	private static final RevisorDomain DEFAULT_OBJECT = new RevisorDomain();
@@ -27,7 +28,8 @@ public class RevisorDomain {
 	private RevisorDomain() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setNumeroIdentificacion(UtilText.EMPTY);;
+		setTipoIdentificacion(TipoIdentificacionDomain.getDefaultObject());
+		setNumeroIdentificacion(UtilText.EMPTY);
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoNombre(UtilText.EMPTY);
 		setPrimerApellido(UtilText.EMPTY);
@@ -35,6 +37,10 @@ public class RevisorDomain {
 		setCorreo(UtilText.EMPTY);
 		setIndicadorPais(UtilText.EMPTY);
 		setNumeroTelefono(UtilText.EMPTY);
+		setTipoRelacion(TipoRelacionInstitucionDomain.getDefaultObject());
+		setConfirmacionCorreo(RespuestaDomain.getDefaultObject());
+		setConfirmacionTelefono(RespuestaDomain.getDefaultObject());
+		setEstado(EstadoRevisorDomain.getDefaultObject());
 	}
 	
 	public RevisorDomain(UUID identificador, TipoIdentificacionDomain tipoIdentificacion,

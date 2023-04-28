@@ -19,6 +19,7 @@ public class TipoRelacionInstitucionDomain {
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
+		setEstado(EstadoTipoRelacionInstitucionDomain.getDefaultObject());
 	}
 	
 	public TipoRelacionInstitucionDomain(UUID identificador, String nombre, String descripcion,

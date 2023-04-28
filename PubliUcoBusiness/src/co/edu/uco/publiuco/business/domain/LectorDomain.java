@@ -7,7 +7,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
 public class LectorDomain {
-	
+
 	private static final LectorDomain DEFAULT_OBJECT = new LectorDomain();
 	private UUID identificador;
 	private TipoIdentificacionDomain tipoIdentificacion;
@@ -23,11 +23,12 @@ public class LectorDomain {
 	private RespuestaDomain confirmacionCorreo;
 	private RespuestaDomain confirmacionTelefono;
 	private EstadoLectorDomain estado;
-	
+
 	private LectorDomain() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setNumeroIdentificacion(UtilText.EMPTY);;
+		setTipoIdentificacion(TipoIdentificacionDomain.getDefaultObject());
+		setNumeroIdentificacion(UtilText.EMPTY);
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoNombre(UtilText.EMPTY);
 		setPrimerApellido(UtilText.EMPTY);
@@ -35,17 +36,22 @@ public class LectorDomain {
 		setCorreo(UtilText.EMPTY);
 		setIndicadorPais(UtilText.EMPTY);
 		setNumeroTelefono(UtilText.EMPTY);
+		setTipoRelacion(TipoRelacionInstitucionDomain.getDefaultObject());
+		setConfirmacionCorreo(RespuestaDomain.getDefaultObject());
+		setConfirmacionTelefono(RespuestaDomain.getDefaultObject());
+		setEstado(EstadoLectorDomain.getDefaultObject());
 	}
-	
-	public LectorDomain(UUID identificador, TipoIdentificacionDomain tipoIdentificacion,
-			String numeroIdentificacion, String primerNombre, String segundoNombre, String primerApellido,
-			String segundoApellido, String correo, String indicadorPais, String numeroTelefono,
-			TipoRelacionInstitucionDomain tipoRelacion, RespuestaDomain confirmacionCorreo, RespuestaDomain confirmacionTelefono,
-			EstadoLectorDomain estado) {
+
+	public LectorDomain(UUID identificador, TipoIdentificacionDomain tipoIdentificacion, String numeroIdentificacion,
+			String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, String correo,
+			String indicadorPais, String numeroTelefono, TipoRelacionInstitucionDomain tipoRelacion,
+			RespuestaDomain confirmacionCorreo, RespuestaDomain confirmacionTelefono, EstadoLectorDomain estado) {
 		super();
 		setIdentificador(identificador);
-		setTipoIdentificacion(tipoIdentificacion);;
-		setNumeroIdentificacion(numeroIdentificacion);;
+		setTipoIdentificacion(tipoIdentificacion);
+		;
+		setNumeroIdentificacion(numeroIdentificacion);
+		;
 		setPrimerNombre(primerNombre);
 		setSegundoNombre(segundoNombre);
 		setPrimerApellido(primerApellido);
@@ -58,11 +64,11 @@ public class LectorDomain {
 		setConfirmacionTelefono(confirmacionTelefono);
 		setEstado(estado);
 	}
-	
+
 	public static LectorDomain getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}
-	
+
 	public final UUID getIdentificador() {
 		return identificador;
 	}
@@ -76,7 +82,8 @@ public class LectorDomain {
 	}
 
 	private final void setTipoIdentificacion(final TipoIdentificacionDomain tipoIdentificacion) {
-		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion, TipoIdentificacionDomain.getDefaultObject());
+		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion,
+				TipoIdentificacionDomain.getDefaultObject());
 	}
 
 	public final String getNumeroIdentificacion() {

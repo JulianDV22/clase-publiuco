@@ -27,6 +27,7 @@ public class EscritorEntity {
 	private EscritorEntity() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setTipoIdentificacion(TipoIdentificacionEntity.getDefaultObject());
 		setNumeroIdentificacion(UtilText.EMPTY);;
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoNombre(UtilText.EMPTY);
@@ -35,6 +36,10 @@ public class EscritorEntity {
 		setCorreo(UtilText.EMPTY);
 		setIndicadorPais(UtilText.EMPTY);
 		setNumeroTelefono(UtilText.EMPTY);
+		setTipoRelacion(TipoRelacionInstitucionEntity.getDefaultObject());
+		setConfirmacionCorreo(RespuestaEntity.getDefaultObject());
+		setConfirmacionTelefono(RespuestaEntity.getDefaultObject());
+		setEstado(EstadoEscritorEntity.getDefaultObject());
 	}
 	
 	public EscritorEntity(UUID identificador, TipoIdentificacionEntity tipoIdentificacion,
@@ -44,8 +49,8 @@ public class EscritorEntity {
 			EstadoEscritorEntity estado) {
 		super();
 		setIdentificador(identificador);
-		setTipoIdentificacion(tipoIdentificacion);;
-		setNumeroIdentificacion(numeroIdentificacion);;
+		setTipoIdentificacion(tipoIdentificacion);
+		setNumeroIdentificacion(numeroIdentificacion);
 		setPrimerNombre(primerNombre);
 		setSegundoNombre(segundoNombre);
 		setPrimerApellido(primerApellido);

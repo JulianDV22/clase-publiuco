@@ -19,6 +19,7 @@ public class TipoRelacionInstitucionEntity {
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
+		setEstado(EstadoTipoRelacionInstitucionEntity.getDefaultObject());
 	}
 	
 	public TipoRelacionInstitucionEntity(UUID identificador, String nombre, String descripcion,

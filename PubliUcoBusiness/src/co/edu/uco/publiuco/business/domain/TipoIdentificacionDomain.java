@@ -19,6 +19,7 @@ public class TipoIdentificacionDomain {
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
+		setEstado(EstadoTipoIdentificacionDomain.getDefaultObject());
 	}
 	
 	public TipoIdentificacionDomain(UUID identificador, String nombre, String descripcion,

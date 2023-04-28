@@ -27,7 +27,8 @@ public class RevisorEntity {
 	private RevisorEntity() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setNumeroIdentificacion(UtilText.EMPTY);;
+		setTipoIdentificacion(TipoIdentificacionEntity.getDefaultObject());
+		setNumeroIdentificacion(UtilText.EMPTY);
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoNombre(UtilText.EMPTY);
 		setPrimerApellido(UtilText.EMPTY);
@@ -35,6 +36,10 @@ public class RevisorEntity {
 		setCorreo(UtilText.EMPTY);
 		setIndicadorPais(UtilText.EMPTY);
 		setNumeroTelefono(UtilText.EMPTY);
+		setTipoRelacion(TipoRelacionInstitucionEntity.getDefaultObject());
+		setConfirmacionCorreo(RespuestaEntity.getDefaultObject());
+		setConfirmacionTelefono(RespuestaEntity.getDefaultObject());
+		setEstado(EstadoRevisorEntity.getDefaultObject());
 	}
 	
 	public RevisorEntity(UUID identificador, TipoIdentificacionEntity tipoIdentificacion,
@@ -44,8 +49,8 @@ public class RevisorEntity {
 			EstadoRevisorEntity estado) {
 		super();
 		setIdentificador(identificador);
-		setTipoIdentificacion(tipoIdentificacion);;
-		setNumeroIdentificacion(numeroIdentificacion);;
+		setTipoIdentificacion(tipoIdentificacion);
+		setNumeroIdentificacion(numeroIdentificacion);
 		setPrimerNombre(primerNombre);
 		setSegundoNombre(segundoNombre);
 		setPrimerApellido(primerApellido);

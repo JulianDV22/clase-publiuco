@@ -6,6 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
+
 public class AdministradorCategoriaDomain {
 
 	private static final AdministradorCategoriaDomain DEFAULT_OBJECT = new AdministradorCategoriaDomain();
@@ -27,14 +28,19 @@ public class AdministradorCategoriaDomain {
 	private AdministradorCategoriaDomain() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setNumeroIdentificacion(UtilText.EMPTY);
-		setPrimerNombre(UtilText.EMPTY);
-		setSegundoNombre(UtilText.EMPTY);
-		setPrimerApellido(UtilText.EMPTY);
-		setSegundoApellido(UtilText.EMPTY);
-		setCorreo(UtilText.EMPTY);
-		setIndicadorPais(UtilText.EMPTY);
-		setNumeroTelefono(UtilText.EMPTY);
+		setTipoIdentificacion(TipoIdentificacionDomain.getDefaultObject());
+		setNumeroIdentificacion(UtilText.getUtilText().getDefaultValue());
+		setPrimerNombre(UtilText.getUtilText().getDefaultValue());
+		setSegundoNombre(UtilText.getUtilText().getDefaultValue());
+		setPrimerApellido(UtilText.getUtilText().getDefaultValue());
+		setSegundoApellido(UtilText.getUtilText().getDefaultValue());
+		setCorreo(UtilText.getUtilText().getDefaultValue());
+		setIndicadorPais(UtilText.getUtilText().getDefaultValue());
+		setNumeroTelefono(UtilText.getUtilText().getDefaultValue());
+		setTipoRelacion(TipoRelacionInstitucionDomain.getDefaultObject());
+		setConfirmacionCorreo(RespuestaDomain.getDefaultObject());
+		setConfirmacionTelefono(RespuestaDomain.getDefaultObject());
+		setEstado(EstadoAdministradorCategoriaDomain.getDefaultObject());
 	}
 
 	public AdministradorCategoriaDomain(UUID identificador, TipoIdentificacionDomain tipoIdentificacion,

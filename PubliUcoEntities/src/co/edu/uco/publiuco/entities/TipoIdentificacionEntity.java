@@ -19,6 +19,7 @@ public class TipoIdentificacionEntity {
 		setIdentificador(UtilUUID.DEFAULT_UUID);
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
+		setEstado(EstadoTipoIdentificacionEntity.getDefaultObject());
 	}
 	
 	public TipoIdentificacionEntity(UUID identificador, String nombre, String descripcion,

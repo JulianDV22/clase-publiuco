@@ -6,6 +6,7 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilObject;
 import co.edu.uco.publiuco.crosscutting.utils.UtilText;
 import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
+
 public class EscritorDomain {
 	
 	private static final EscritorDomain DEFAULT_OBJECT = new EscritorDomain();
@@ -27,6 +28,7 @@ public class EscritorDomain {
 	private EscritorDomain() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setTipoIdentificacion(TipoIdentificacionDomain.getDefaultObject());
 		setNumeroIdentificacion(UtilText.EMPTY);;
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoNombre(UtilText.EMPTY);
@@ -35,6 +37,10 @@ public class EscritorDomain {
 		setCorreo(UtilText.EMPTY);
 		setIndicadorPais(UtilText.EMPTY);
 		setNumeroTelefono(UtilText.EMPTY);
+		setTipoRelacion(TipoRelacionInstitucionDomain.getDefaultObject());
+		setConfirmacionCorreo(RespuestaDomain.getDefaultObject());
+		setConfirmacionTelefono(RespuestaDomain.getDefaultObject());
+		setEstado(EstadoEscritorDomain.getDefaultObject());
 	}
 	
 	public EscritorDomain(UUID identificador, TipoIdentificacionDomain tipoIdentificacion,

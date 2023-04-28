@@ -28,14 +28,19 @@ public class AdministradorCategoriaEntity {
 	private AdministradorCategoriaEntity() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setNumeroIdentificacion(UtilText.EMPTY);;
-		setPrimerNombre(UtilText.EMPTY);
-		setSegundoNombre(UtilText.EMPTY);
-		setPrimerApellido(UtilText.EMPTY);
-		setSegundoApellido(UtilText.EMPTY);
-		setCorreo(UtilText.EMPTY);
-		setIndicadorPais(UtilText.EMPTY);
-		setNumeroTelefono(UtilText.EMPTY);
+		setTipoIdentificacion(TipoIdentificacionEntity.getDefaultObject());
+		setNumeroIdentificacion(UtilText.getUtilText().getDefaultValue());
+		setPrimerNombre(UtilText.getUtilText().getDefaultValue());
+		setSegundoNombre(UtilText.getUtilText().getDefaultValue());
+		setPrimerApellido(UtilText.getUtilText().getDefaultValue());
+		setSegundoApellido(UtilText.getUtilText().getDefaultValue());
+		setCorreo(UtilText.getUtilText().getDefaultValue());
+		setIndicadorPais(UtilText.getUtilText().getDefaultValue());
+		setNumeroTelefono(UtilText.getUtilText().getDefaultValue());
+		setTipoRelacion(TipoRelacionInstitucionEntity.getDefaultObject());
+		setConfirmacionCorreo(RespuestaEntity.getDefaultObject());
+		setConfirmacionTelefono(RespuestaEntity.getDefaultObject());
+		setEstado(EstadoAdministradorCategoriaEntity.getDefaultObject());
 	}
 	
 	public AdministradorCategoriaEntity(UUID identificador, TipoIdentificacionEntity tipoIdentificacion,
@@ -45,8 +50,8 @@ public class AdministradorCategoriaEntity {
 			EstadoAdministradorCategoriaEntity estado) {
 		super();
 		setIdentificador(identificador);
-		setTipoIdentificacion(tipoIdentificacion);;
-		setNumeroIdentificacion(numeroIdentificacion);;
+		setTipoIdentificacion(tipoIdentificacion);
+		setNumeroIdentificacion(numeroIdentificacion);
 		setPrimerNombre(primerNombre);
 		setSegundoNombre(segundoNombre);
 		setPrimerApellido(primerApellido);

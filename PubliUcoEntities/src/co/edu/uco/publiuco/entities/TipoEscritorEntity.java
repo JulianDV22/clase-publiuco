@@ -8,10 +8,19 @@ import co.edu.uco.publiuco.crosscutting.utils.UtilUUID;
 
 public class TipoEscritorEntity {
 	
+	private static final TipoEscritorEntity DEFAULT_OBJECT = new TipoEscritorEntity();
 	private UUID identificador;
 	private String nombre;
 	private String descripcion;
 	private EstadoTipoEscritorEntity estado;
+	
+	private TipoEscritorEntity() {
+		super();
+		setIdentificador(UtilUUID.DEFAULT_UUID);
+		setNombre(UtilText.EMPTY);
+		setDescripcion(UtilText.EMPTY);
+		setEstado(EstadoTipoEscritorEntity.getDefaultObject());
+	}
 	
 	
 	public TipoEscritorEntity(UUID identificador, String nombre, String descripcion,
@@ -21,9 +30,11 @@ public class TipoEscritorEntity {
 		setNombre(nombre);
 		setDescripcion(descripcion);
 		setEstado(estado);
-		
 	}
 	
+	public static TipoEscritorEntity getDefaultObject() {
+		return DEFAULT_OBJECT;
+	}
 	//Setter y Getter
 	public final UUID getIdentificador() {
 		return identificador;

@@ -41,7 +41,7 @@ public class CategoriaDTO {
 		return identificador;
 	}
 
-	public final CategoriaDTO setIdentificador(UUID identificador) {
+	public final CategoriaDTO setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
 		return this;
 	}
@@ -50,7 +50,7 @@ public class CategoriaDTO {
 		return categoriaPadre;
 	}
 
-	public final CategoriaDTO setCategoriaPadre(CategoriaDTO categoriaPadre) {
+	public final CategoriaDTO setCategoriaPadre(final CategoriaDTO categoriaPadre) {
 		this.categoriaPadre = UtilObject.getDefault(categoriaPadre, CategoriaDTO.create());
 		return this;
 	}
@@ -59,7 +59,7 @@ public class CategoriaDTO {
 		return nombre;
 	}
 
-	public final CategoriaDTO setNombre(String nombre) {
+	public final CategoriaDTO setNombre(final String nombre) {
 		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 		return this;
 	}
@@ -68,7 +68,7 @@ public class CategoriaDTO {
 		return descripcion;
 	}
 
-	public final CategoriaDTO setDescripcion(String descripcion) {
+	public final CategoriaDTO setDescripcion(final String descripcion) {
 		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
 		return this;
 	}
@@ -77,7 +77,7 @@ public class CategoriaDTO {
 		return estado;
 	}
 
-	public final CategoriaDTO setEstado(EstadoCategoriaDTO estado) {
+	public final CategoriaDTO setEstado(final EstadoCategoriaDTO estado) {
 		this.estado = UtilObject.getDefault(estado, EstadoCategoriaDTO.create());
 		return this;
 	}
