@@ -1,0 +1,38 @@
+package co.edu.uco.publiuco.data.dao.relational.sqlserver;
+
+import java.sql.Connection;
+import java.util.List;
+
+import co.edu.uco.publiuco.data.dao.PalabraClavePublicacionDAO;
+
+public final class PalabraClavePublicacionSqlServerDAO implements PalabraClavePublicacionDAO {
+
+	public PalabraClavePublicacionSqlServerDAO(final Connection connection) {
+
+	}
+
+	@Override
+	public void create(PalabraClavePublicacionDAO entity) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<PalabraClavePublicacionDAO> read(PalabraClavePublicacionDAO entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(PalabraClavePublicacionDAO entity) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(PalabraClavePublicacionDAO entity) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

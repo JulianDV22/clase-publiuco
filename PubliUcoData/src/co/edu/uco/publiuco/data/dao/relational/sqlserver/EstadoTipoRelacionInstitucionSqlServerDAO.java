@@ -6,7 +6,7 @@ import java.util.List;
 import co.edu.uco.publiuco.data.dao.EstadoTipoRelacionInstitucionDAO;
 import co.edu.uco.publiuco.entities.EstadoTipoRelacionInstitucionEntity;
 
-public class EstadoTipoRelacionInstitucionSqlServerDAO implements EstadoTipoRelacionInstitucionDAO {
+public final class EstadoTipoRelacionInstitucionSqlServerDAO implements EstadoTipoRelacionInstitucionDAO {
 
 	public EstadoTipoRelacionInstitucionSqlServerDAO(final Connection connection) {
 		
@@ -22,18 +22,6 @@ public class EstadoTipoRelacionInstitucionSqlServerDAO implements EstadoTipoRela
 	public final List<EstadoTipoRelacionInstitucionEntity> read(final EstadoTipoRelacionInstitucionEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public final void update(final EstadoTipoRelacionInstitucionEntity entity) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public final void delete(final EstadoTipoRelacionInstitucionEntity entity) {
-		// TODO Auto-generated method stub
-
 	}
 
 }
