@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.RevisorRevisionEntity;
+
 public interface RevisorRevisionDAO {
 
-	void create(RevisorRevisionDAO entity);
+	void create(RevisorRevisionEntity entity);
 
-	List<RevisorRevisionDAO> read(RevisorRevisionDAO entity);
+	List<RevisorRevisionEntity> read(RevisorRevisionEntity entity);
 
-	void update(RevisorRevisionDAO entity);
+	void update(RevisorRevisionEntity entity);
 
-	void delete(RevisorRevisionDAO entity);
+	void delete(RevisorRevisionEntity entity);
 
 }

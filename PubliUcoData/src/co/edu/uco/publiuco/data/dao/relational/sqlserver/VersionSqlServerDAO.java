@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.VersionDAO;
+import co.edu.uco.publiuco.entities.VersionEntity;
 
 public final class VersionSqlServerDAO implements VersionDAO {
 
@@ -12,25 +13,25 @@ public final class VersionSqlServerDAO implements VersionDAO {
 	}
 
 	@Override
-	public void create(VersionDAO entity) {
+	public void create(VersionEntity entity) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public List<VersionDAO> read(VersionDAO entity) {
+	public List<VersionEntity> read(VersionEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void update(VersionDAO entity) {
+	public void update(VersionEntity entity) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void delete(VersionDAO entity) {
+	public void delete(VersionEntity entity) {
 		// TODO Auto-generated method stub
 
 	}

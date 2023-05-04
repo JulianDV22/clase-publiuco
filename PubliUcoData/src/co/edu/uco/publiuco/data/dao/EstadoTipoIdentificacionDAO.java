@@ -2,10 +2,12 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.EstadoTipoIdentificacionEntity;
+
 public interface EstadoTipoIdentificacionDAO {
 	
-	void create(EstadoTipoIdentificacionDAO entity);
+	void create(EstadoTipoIdentificacionEntity entity);
 
-	List<EstadoTipoIdentificacionDAO> read(EstadoTipoIdentificacionDAO entity);
+	List<EstadoTipoIdentificacionEntity> read(EstadoTipoIdentificacionEntity entity);
 
 }

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.EstadoPreferenciaDAO;
+import co.edu.uco.publiuco.entities.EstadoPreferenciaEntity;
 
 public class EstadoPreferenciaSqlServerDAO implements EstadoPreferenciaDAO {
 
@@ -12,15 +13,17 @@ public class EstadoPreferenciaSqlServerDAO implements EstadoPreferenciaDAO {
 	}
 
 	@Override
-	public void create(EstadoPreferenciaDAO entity) {
+	public void create(EstadoPreferenciaEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public List<EstadoPreferenciaDAO> read(EstadoPreferenciaDAO entity) {
+	public List<EstadoPreferenciaEntity> read(EstadoPreferenciaEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

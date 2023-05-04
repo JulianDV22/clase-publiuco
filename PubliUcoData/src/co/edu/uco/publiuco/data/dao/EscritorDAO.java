@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.EscritorEntity;
+
 public interface EscritorDAO {
 	
-	void create(EscritorDAO entity);
+	void create(EscritorEntity entity);
 
-	List<EscritorDAO> read(EscritorDAO entity);
+	List<EscritorEntity> read(EscritorEntity entity);
 
-	void update(EscritorDAO entity);
+	void update(EscritorEntity entity);
 
-	void delete(EscritorDAO entity);
+	void delete(EscritorEntity entity);
 
 }

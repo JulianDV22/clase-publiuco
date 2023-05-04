@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.ReporteEntity;
+
 public interface ReporteDAO {
 	
-	void create(ReporteDAO entity);
+	void create(ReporteEntity entity);
 
-	List<ReporteDAO> read(ReporteDAO entity);
+	List<ReporteEntity> read(ReporteEntity entity);
 
-	void update(ReporteDAO entity);
+	void update(ReporteEntity entity);
 
-	void delete(ReporteDAO entity);
+	void delete(ReporteEntity entity);
 
 }

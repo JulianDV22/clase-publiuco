@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.PreferenciaEscritorDAO;
+import co.edu.uco.publiuco.entities.PreferenciaEscritorEntity;
 
 public final class PreferenciaEscritorSqlServerDAO implements PreferenciaEscritorDAO {
 
@@ -12,27 +13,29 @@ public final class PreferenciaEscritorSqlServerDAO implements PreferenciaEscrito
 	}
 
 	@Override
-	public void create(PreferenciaEscritorDAO entity) {
+	public void create(PreferenciaEscritorEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public List<PreferenciaEscritorDAO> read(PreferenciaEscritorDAO entity) {
+	public List<PreferenciaEscritorEntity> read(PreferenciaEscritorEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void update(PreferenciaEscritorDAO entity) {
+	public void update(PreferenciaEscritorEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public void delete(PreferenciaEscritorDAO entity) {
+	public void delete(PreferenciaEscritorEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	
 
 }

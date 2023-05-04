@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.EstadoPlanDAO;
+import co.edu.uco.publiuco.entities.EstadoPlanEntity;
 
 public final class EstadoPlanSqlServerDAO implements EstadoPlanDAO {
 
@@ -12,13 +13,13 @@ public final class EstadoPlanSqlServerDAO implements EstadoPlanDAO {
 	}
 
 	@Override
-	public void create(EstadoPlanDAO entity) {
+	public void create(EstadoPlanEntity entity) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public List<EstadoPlanDAO> read(EstadoPlanDAO entity) {
+	public List<EstadoPlanEntity> read(EstadoPlanEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -1,6 +1,5 @@
 package co.edu.uco.publiuco.crosscutting.utils;
 
-import java.security.PublicKey;
 import java.sql.Connection;
 import java.sql.SQLException;
 

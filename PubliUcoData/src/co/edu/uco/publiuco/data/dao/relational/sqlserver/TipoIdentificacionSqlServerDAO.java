@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.TipoIdentificacionDAO;
+import co.edu.uco.publiuco.entities.TipoIdentificacionEntity;
 
 public class TipoIdentificacionSqlServerDAO implements TipoIdentificacionDAO {
 
@@ -12,27 +13,29 @@ public class TipoIdentificacionSqlServerDAO implements TipoIdentificacionDAO {
 	}
 
 	@Override
-	public void create(TipoIdentificacionDAO entity) {
+	public void create(TipoIdentificacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public List<TipoIdentificacionDAO> read(TipoIdentificacionDAO entity) {
+	public List<TipoIdentificacionEntity> read(TipoIdentificacionEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void update(TipoIdentificacionDAO entity) {
+	public void update(TipoIdentificacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public void delete(TipoIdentificacionDAO entity) {
+	public void delete(TipoIdentificacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	
 
 }

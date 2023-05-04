@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.SuscripcionCategoriaDAO;
+import co.edu.uco.publiuco.entities.SuscripcionCategoriaEntity;
 
 public final class SuscripcionCategoriaSqlServerDAO implements SuscripcionCategoriaDAO {
 
@@ -12,27 +13,29 @@ public final class SuscripcionCategoriaSqlServerDAO implements SuscripcionCatego
 	}
 
 	@Override
-	public void create(SuscripcionCategoriaDAO entity) {
+	public void create(SuscripcionCategoriaEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public List<SuscripcionCategoriaDAO> read(SuscripcionCategoriaDAO entity) {
+	public List<SuscripcionCategoriaEntity> read(SuscripcionCategoriaEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void update(SuscripcionCategoriaDAO entity) {
+	public void update(SuscripcionCategoriaEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public void delete(SuscripcionCategoriaDAO entity) {
+	public void delete(SuscripcionCategoriaEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	
 
 }

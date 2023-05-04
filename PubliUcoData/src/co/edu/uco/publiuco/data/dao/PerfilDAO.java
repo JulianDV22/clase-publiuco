@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.PerfilEntity;
+
 public interface PerfilDAO {
 	
-	void create(PerfilDAO entity);
+	void create(PerfilEntity entity);
 
-	List<PerfilDAO> read(PerfilDAO entity);
+	List<PerfilEntity> read(PerfilEntity entity);
 
-	void update(PerfilDAO entity);
+	void update(PerfilEntity entity);
 
-	void delete(PerfilDAO entity);
+	void delete(PerfilEntity entity);
 
 }

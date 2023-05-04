@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.HistorialAccesoPublicacionDAO;
+import co.edu.uco.publiuco.entities.HistorialAccesoPublicacionEntity;
 
 public final class HistorialAccesoPublicacionSqlServerDAO implements HistorialAccesoPublicacionDAO {
 
@@ -12,27 +13,29 @@ public final class HistorialAccesoPublicacionSqlServerDAO implements HistorialAc
 	}
 
 	@Override
-	public void create(HistorialAccesoPublicacionDAO entity) {
+	public void create(HistorialAccesoPublicacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public List<HistorialAccesoPublicacionDAO> read(HistorialAccesoPublicacionDAO entity) {
+	public List<HistorialAccesoPublicacionEntity> read(HistorialAccesoPublicacionEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void update(HistorialAccesoPublicacionDAO entity) {
+	public void update(HistorialAccesoPublicacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public void delete(HistorialAccesoPublicacionDAO entity) {
+	public void delete(HistorialAccesoPublicacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	
 
 }

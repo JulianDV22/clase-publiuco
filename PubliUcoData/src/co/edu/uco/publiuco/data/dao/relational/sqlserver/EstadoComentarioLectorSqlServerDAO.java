@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.EstadoComentarioLectorDAO;
+import co.edu.uco.publiuco.entities.EstadoComentarioLectorEntity;
 
 public class EstadoComentarioLectorSqlServerDAO implements EstadoComentarioLectorDAO {
 
@@ -12,15 +13,17 @@ public class EstadoComentarioLectorSqlServerDAO implements EstadoComentarioLecto
 	}
 
 	@Override
-	public void create(EstadoComentarioLectorDAO entity) {
+	public void create(EstadoComentarioLectorEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public List<EstadoComentarioLectorDAO> read(EstadoComentarioLectorDAO entity) {
+	public List<EstadoComentarioLectorEntity> read(EstadoComentarioLectorEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

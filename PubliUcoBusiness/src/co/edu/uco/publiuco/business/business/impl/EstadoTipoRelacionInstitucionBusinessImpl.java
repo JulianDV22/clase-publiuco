@@ -12,8 +12,8 @@ public final class EstadoTipoRelacionInstitucionBusinessImpl implements EstadoTi
 
 	private DAOFactory daoFactory;
 
-	public EstadoTipoRelacionInstitucionBusinessImpl(final DAOFactory daoFactoy) {
-		this.daoFactory = daoFactoy;
+	public EstadoTipoRelacionInstitucionBusinessImpl(final DAOFactory daoFactoy, DAOFactory daoFactory) {
+		this.daoFactory = daoFactory;
 	}
 
 	@Override
@@ -21,25 +21,14 @@ public final class EstadoTipoRelacionInstitucionBusinessImpl implements EstadoTi
 		final EstadoTipoRelacionInstitucionEntity entity = EstadoTipoRelacionInstitucionAssembler.getInstance()
 				.toEntityFromDomain(domain);
 		daoFactory.getEstadoTipoRelacionInstitucionDAO().create(entity);
-
 	}
 
 	@Override
 	public final List<EstadoTipoRelacionInstitucionDomain> list(final EstadoTipoRelacionInstitucionDomain domain) {
-		// TODO Auto-generated method stub
+		final EstadoTipoRelacionInstitucionEntity entity = EstadoTipoRelacionInstitucionAssembler.getInstance()
+				.toEntityFromDomain(domain);
+		List<EstadoTipoRelacionInstitucionEntity> result = daoFactory.getEstadoTipoRelacionInstitucionDAO()
+				.read(entity);
 		return null;
 	}
-
-	@Override
-	public final void modify(final EstadoTipoRelacionInstitucionDomain domain) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public final void drop(final EstadoTipoRelacionInstitucionDomain domain) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

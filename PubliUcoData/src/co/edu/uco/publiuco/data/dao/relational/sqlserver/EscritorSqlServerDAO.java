@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.EscritorDAO;
+import co.edu.uco.publiuco.entities.EscritorEntity;
 
 public final class EscritorSqlServerDAO implements EscritorDAO {
 
@@ -12,27 +13,29 @@ public final class EscritorSqlServerDAO implements EscritorDAO {
 	}
 
 	@Override
-	public final void create(final EscritorDAO entity) {
+	public void create(EscritorEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public final List<EscritorDAO> read(final EscritorDAO entity) {
+	public List<EscritorEntity> read(EscritorEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public final void update(final EscritorDAO entity) {
+	public void update(EscritorEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public final void delete(final EscritorDAO entity) {
+	public void delete(EscritorEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	
 
 }

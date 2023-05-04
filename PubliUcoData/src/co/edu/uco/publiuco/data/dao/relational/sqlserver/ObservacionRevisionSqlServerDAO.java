@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.ObservacionRevisionDAO;
+import co.edu.uco.publiuco.entities.ObservacionRevisionEntity;
 
 public final class ObservacionRevisionSqlServerDAO implements ObservacionRevisionDAO {
 
@@ -12,27 +13,29 @@ public final class ObservacionRevisionSqlServerDAO implements ObservacionRevisio
 	}
 
 	@Override
-	public void create(ObservacionRevisionDAO entity) {
+	public void create(ObservacionRevisionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public List<ObservacionRevisionDAO> read(ObservacionRevisionDAO entity) {
+	public List<ObservacionRevisionEntity> read(ObservacionRevisionEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void update(ObservacionRevisionDAO entity) {
+	public void update(ObservacionRevisionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public void delete(ObservacionRevisionDAO entity) {
+	public void delete(ObservacionRevisionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	
 
 }

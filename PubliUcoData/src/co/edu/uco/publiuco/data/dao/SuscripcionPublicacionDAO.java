@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.SuscripcionPublicacionEntity;
+
 public interface SuscripcionPublicacionDAO {
 	
-	void create(SuscripcionPublicacionDAO entity);
+	void create(SuscripcionPublicacionEntity entity);
 
-	List<SuscripcionPublicacionDAO> read(SuscripcionPublicacionDAO entity);
+	List<SuscripcionPublicacionEntity> read(SuscripcionPublicacionEntity entity);
 
-	void update(SuscripcionPublicacionDAO entity);
+	void update(SuscripcionPublicacionEntity entity);
 
-	void delete(SuscripcionPublicacionDAO entity);
+	void delete(SuscripcionPublicacionEntity entity);
 
 }

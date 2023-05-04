@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.CalificacionDAO;
+import co.edu.uco.publiuco.entities.CalificacionEntity;
 
 public final class CalificacionSqlServerDAO implements CalificacionDAO {
 
@@ -12,27 +13,29 @@ public final class CalificacionSqlServerDAO implements CalificacionDAO {
 	}
 
 	@Override
-	public final void create(final CalificacionDAO entity) {
+	public void create(CalificacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public final List<CalificacionDAO> read(final CalificacionDAO entity) {
+	public List<CalificacionEntity> read(CalificacionEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public final void update(final CalificacionDAO entity) {
+	public void update(CalificacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public final void delete(final CalificacionDAO entity) {
+	public void delete(CalificacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	
 
 }

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.PalabraClavePublicacionDAO;
+import co.edu.uco.publiuco.entities.PalabraClavePublicacionEntity;
 
 public final class PalabraClavePublicacionSqlServerDAO implements PalabraClavePublicacionDAO {
 
@@ -12,27 +13,29 @@ public final class PalabraClavePublicacionSqlServerDAO implements PalabraClavePu
 	}
 
 	@Override
-	public void create(PalabraClavePublicacionDAO entity) {
+	public void create(PalabraClavePublicacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public List<PalabraClavePublicacionDAO> read(PalabraClavePublicacionDAO entity) {
+	public List<PalabraClavePublicacionEntity> read(PalabraClavePublicacionEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void update(PalabraClavePublicacionDAO entity) {
+	public void update(PalabraClavePublicacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public void delete(PalabraClavePublicacionDAO entity) {
+	public void delete(PalabraClavePublicacionEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	
 
 }

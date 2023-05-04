@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.RespuestaDAO;
+import co.edu.uco.publiuco.entities.RespuestaEntity;
 
 public final class RespuestaSqlServerDAO implements RespuestaDAO {
 
@@ -12,15 +13,17 @@ public final class RespuestaSqlServerDAO implements RespuestaDAO {
 	}
 
 	@Override
-	public void create(RespuestaDAO entity) {
+	public void create(RespuestaEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public List<RespuestaDAO> read(RespuestaDAO entity) {
+	public List<RespuestaEntity> read(RespuestaEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

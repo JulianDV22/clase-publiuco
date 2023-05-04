@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.EstadoRevisorDAO;
+import co.edu.uco.publiuco.entities.EstadoRevisorEntity;
 
 public final class EstadoRevisorSqlServerDAO implements EstadoRevisorDAO {
 
@@ -12,15 +13,17 @@ public final class EstadoRevisorSqlServerDAO implements EstadoRevisorDAO {
 	}
 
 	@Override
-	public void create(EstadoRevisorDAO entity) {
+	public void create(EstadoRevisorEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public List<EstadoRevisorDAO> read(EstadoRevisorDAO entity) {
+	public List<EstadoRevisorEntity> read(EstadoRevisorEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

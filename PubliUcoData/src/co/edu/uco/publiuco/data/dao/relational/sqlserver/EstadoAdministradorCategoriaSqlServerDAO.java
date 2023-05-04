@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.EstadoAdministradorCategoriaDAO;
+import co.edu.uco.publiuco.entities.EstadoAdministradorCategoriaEntity;
 
 public class EstadoAdministradorCategoriaSqlServerDAO implements EstadoAdministradorCategoriaDAO {
 
@@ -12,15 +13,17 @@ public class EstadoAdministradorCategoriaSqlServerDAO implements EstadoAdministr
 	}
 
 	@Override
-	public final void create(final EstadoAdministradorCategoriaDAO entity) {
+	public void create(EstadoAdministradorCategoriaEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public final List<EstadoAdministradorCategoriaDAO> read(final EstadoAdministradorCategoriaDAO entity) {
+	public List<EstadoAdministradorCategoriaEntity> read(EstadoAdministradorCategoriaEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

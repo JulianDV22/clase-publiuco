@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.ComentarioLectorEntity;
+
 public interface ComentarioLectorDAO {
 	
-	void create(ComentarioLectorDAO entity);
+	void create(ComentarioLectorEntity entity);
 
-	List<ComentarioLectorDAO> read(ComentarioLectorDAO entity);
+	List<ComentarioLectorEntity> read(ComentarioLectorEntity entity);
 
-	void update(ComentarioLectorDAO entity);
+	void update(ComentarioLectorEntity entity);
 
-	void delete(ComentarioLectorDAO entity);
+	void delete(ComentarioLectorEntity entity);
 
 }

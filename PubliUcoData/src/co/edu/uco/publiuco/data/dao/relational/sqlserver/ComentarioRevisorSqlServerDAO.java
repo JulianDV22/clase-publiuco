@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import co.edu.uco.publiuco.data.dao.ComentarioRevisorDAO;
+import co.edu.uco.publiuco.entities.ComentarioRevisorEntity;
 
 public final class ComentarioRevisorSqlServerDAO implements ComentarioRevisorDAO {
 
@@ -12,27 +13,28 @@ public final class ComentarioRevisorSqlServerDAO implements ComentarioRevisorDAO
 	}
 
 	@Override
-	public final void create(final ComentarioRevisorDAO entity) {
+	public void create(ComentarioRevisorEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public final List<ComentarioRevisorDAO> read(final ComentarioRevisorDAO entity) {
+	public List<ComentarioRevisorEntity> read(ComentarioRevisorEntity entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public final void update(final ComentarioRevisorDAO entity) {
+	public void update(ComentarioRevisorEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public final void delete(final ComentarioRevisorDAO entity) {
+	public void delete(ComentarioRevisorEntity entity) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
+	
 }

@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.TipoIdentificacionEntity;
+
 public interface TipoIdentificacionDAO {
 	
-	void create(TipoIdentificacionDAO entity);
+	void create(TipoIdentificacionEntity entity);
 
-	List<TipoIdentificacionDAO> read(TipoIdentificacionDAO entity);
+	List<TipoIdentificacionEntity> read(TipoIdentificacionEntity entity);
 	
-	void update(TipoIdentificacionDAO entity);
+	void update(TipoIdentificacionEntity entity);
 
-	void delete(TipoIdentificacionDAO entity);
+	void delete(TipoIdentificacionEntity entity);
 
 }

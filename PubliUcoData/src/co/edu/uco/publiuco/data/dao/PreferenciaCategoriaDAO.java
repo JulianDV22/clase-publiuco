@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.PreferenciaCategoriaEntity;
+
 public interface PreferenciaCategoriaDAO {
 	
-	void create(PreferenciaCategoriaDAO entity);
+	void create(PreferenciaCategoriaEntity entity);
 
-	List<PreferenciaCategoriaDAO> read(PreferenciaCategoriaDAO entity);
+	List<PreferenciaCategoriaEntity> read(PreferenciaCategoriaEntity entity);
 
-	void update(PreferenciaCategoriaDAO entity);
+	void update(PreferenciaCategoriaEntity entity);
 
-	void delete(PreferenciaCategoriaDAO entity);
+	void delete(PreferenciaCategoriaEntity entity);
 
 }

@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.HistorialAccesoPublicacionEntity;
+
 public interface HistorialAccesoPublicacionDAO {
 	
-	void create(HistorialAccesoPublicacionDAO entity);
+	void create(HistorialAccesoPublicacionEntity entity);
 
-	List<HistorialAccesoPublicacionDAO> read(HistorialAccesoPublicacionDAO entity);
+	List<HistorialAccesoPublicacionEntity> read(HistorialAccesoPublicacionEntity entity);
 
-	void update(HistorialAccesoPublicacionDAO entity);
+	void update(HistorialAccesoPublicacionEntity entity);
 
-	void delete(HistorialAccesoPublicacionDAO entity);
+	void delete(HistorialAccesoPublicacionEntity entity);
 
 }

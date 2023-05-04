@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.CategoriaAdministradorCategoriaEntity;
+
 public interface CategoriaAdministradorCategoriaDAO {
 	
-	void create(CategoriaAdministradorCategoriaDAO entity);
+	void create(CategoriaAdministradorCategoriaEntity entity);
 
-	List<CategoriaAdministradorCategoriaDAO> read(CategoriaAdministradorCategoriaDAO entity);
+	List<CategoriaAdministradorCategoriaEntity> read(CategoriaAdministradorCategoriaEntity entity);
 
-	void update(CategoriaAdministradorCategoriaDAO entity);
+	void update(CategoriaAdministradorCategoriaEntity entity);
 
-	void delete(CategoriaAdministradorCategoriaDAO entity);
+	void delete(CategoriaAdministradorCategoriaEntity entity);
 
 }

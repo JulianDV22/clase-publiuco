@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.VersionEntity;
+
 public interface VersionDAO {
-	
-	void create(VersionDAO entity);
 
-	List<VersionDAO> read(VersionDAO entity);
+	void create(VersionEntity entity);
 
-	void update(VersionDAO entity);
+	List<VersionEntity> read(VersionEntity entity);
 
-	void delete(VersionDAO entity);
+	void update(VersionEntity entity);
+
+	void delete(VersionEntity entity);
 
 }

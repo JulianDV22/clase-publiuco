@@ -2,10 +2,12 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.EstadoPreferenciaEntity;
+
 public interface EstadoPreferenciaDAO {
 	
-	void create(EstadoPreferenciaDAO entity);
+	void create(EstadoPreferenciaEntity entity);
 
-	List<EstadoPreferenciaDAO> read(EstadoPreferenciaDAO entity);
+	List<EstadoPreferenciaEntity> read(EstadoPreferenciaEntity entity);
 
 }

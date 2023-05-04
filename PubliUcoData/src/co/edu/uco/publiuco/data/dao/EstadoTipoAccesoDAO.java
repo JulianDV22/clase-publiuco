@@ -2,10 +2,12 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.EstadoTipoAccesoEntity;
+
 public interface EstadoTipoAccesoDAO {
 	
-	void create(EstadoTipoAccesoDAO entity);
+	void create(EstadoTipoAccesoEntity entity);
 
-	List<EstadoTipoAccesoDAO> read(EstadoTipoAccesoDAO entity);
+	List<EstadoTipoAccesoEntity> read(EstadoTipoAccesoEntity entity);
 
 }

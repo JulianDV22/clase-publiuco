@@ -2,10 +2,12 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.EstadoVersionEntity;
+
 public interface EstadoVersionDAO {
 	
-	void create(EstadoVersionDAO entity);
+	void create(EstadoVersionEntity entity);
 
-	List<EstadoVersionDAO> read(EstadoVersionDAO entity);
+	List<EstadoVersionEntity> read(EstadoVersionEntity entity);
 
 }

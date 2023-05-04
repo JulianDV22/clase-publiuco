@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.TipoAccesoEntity;
+
 public interface TipoAccesoDAO {
 	
-	void create(TipoAccesoDAO entity);
+	void create(TipoAccesoEntity entity);
 
-	List<TipoAccesoDAO> read(TipoAccesoDAO entity);
+	List<TipoAccesoEntity> read(TipoAccesoEntity entity);
 	
-	void update(TipoAccesoDAO entity);
+	void update(TipoAccesoEntity entity);
 
-	void delete(TipoAccesoDAO entity);
+	void delete(TipoAccesoEntity entity);
 
 }

@@ -2,10 +2,12 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
-public interface EstadoComentarioLectorDAO {
-	
-	void create(EstadoComentarioLectorDAO entity);
+import co.edu.uco.publiuco.entities.EstadoComentarioLectorEntity;
 
-	List<EstadoComentarioLectorDAO> read(EstadoComentarioLectorDAO entity);
+public interface EstadoComentarioLectorDAO {
+
+	void create(EstadoComentarioLectorEntity entity);
+
+	List<EstadoComentarioLectorEntity> read(EstadoComentarioLectorEntity entity);
 
 }

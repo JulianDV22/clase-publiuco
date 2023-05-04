@@ -2,14 +2,16 @@ package co.edu.uco.publiuco.data.dao;
 
 import java.util.List;
 
+import co.edu.uco.publiuco.entities.CalificacionEntity;
+
 public interface CalificacionDAO {
 	
-	void create(CalificacionDAO entity);
+	void create(CalificacionEntity entity);
 
-	List<CalificacionDAO> read(CalificacionDAO entity);
+	List<CalificacionEntity> read(CalificacionEntity entity);
 
-	void update(CalificacionDAO entity);
+	void update(CalificacionEntity entity);
 
-	void delete(CalificacionDAO entity);
+	void delete(CalificacionEntity entity);
 
 }
