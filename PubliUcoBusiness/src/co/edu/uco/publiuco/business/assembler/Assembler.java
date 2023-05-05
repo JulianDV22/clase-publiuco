@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler;
 
+import java.util.List;
+
 public interface Assembler<D, T, E> {
 
 	T toDTOFromDomain(D domain);
@@ -9,4 +11,6 @@ public interface Assembler<D, T, E> {
 	E toEntityFromDomain(D domain);
 
 	D toDomainFromEntity(E entity);
+
+	List<D> toDomainListFromEntityList(List<E> entityList);
 }

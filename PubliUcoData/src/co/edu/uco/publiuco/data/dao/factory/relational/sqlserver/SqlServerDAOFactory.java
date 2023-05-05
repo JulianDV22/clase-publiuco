@@ -124,19 +124,19 @@ public final class SqlServerDAOFactory extends DAOFactory{
 	}
 
 	@Override
-	public final void iniciarTransaccion() {
+	public final void initTransaction() {
 		// setAutoCommit->false
 		
 	}
 
 	@Override
-	public final void confirmarTransaccion() {
+	public final void commitTransaction() {
 		// commit
 		
 	}
 
 	@Override
-	public final void cancelarTransaccion() {
+	public final void cancelTransaction() {
 		// rollback
 		
 	}
