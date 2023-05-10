@@ -29,10 +29,10 @@ public class EstadoAdministradorCategoriaBusinessImpl implements EstadoAdministr
 		final EstadoAdministradorCategoriaEntity entity = EstadoAdministradorCategoriaAssembler.getInstance()
 				.toEntityFromDomain(domain);
 
-		final List<EstadoAdministradorCategoriaEntity> result = daoFactory.getEstadoAdministradorCategoriaDAO()
+		List<EstadoAdministradorCategoriaEntity> resultEntityList = daoFactory.getEstadoAdministradorCategoriaDAO()
 				.read(entity);
 
-		return null;
+		return EstadoAdministradorCategoriaAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 }

@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.ObservacionRevisionDomain;
 import co.edu.uco.publiuco.dto.ObservacionRevisionDTO;
@@ -58,6 +60,12 @@ public class ObservacionRevisionAssembler
 				entity.getFechaReporteObservacion(), entity.getFechaRevisionObservacion(),
 				EstadoObservacionRevisorAssembler.getInstance().toDomainFromEntity(entity.getEstado()),
 				entity.getObservacion());
+	}
+
+	@Override
+	public List<ObservacionRevisionDomain> toDomainListFromEntityList(List<ObservacionRevisionEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
 }

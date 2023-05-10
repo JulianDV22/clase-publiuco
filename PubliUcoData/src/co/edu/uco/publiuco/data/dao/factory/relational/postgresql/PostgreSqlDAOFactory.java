@@ -109,17 +109,17 @@ public final class PostgreSqlDAOFactory extends DAOFactory {
 	private Connection connection;
 
 	public PostgreSqlDAOFactory() {
-		abrirConexion();
+		openConection();
 	}
 
 	@Override
-	protected void abrirConexion() {
+	protected void openConection() {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void cerrarConexion() {
+	public void closeConection() {
 		// TODO Auto-generated method stub
 
 	}

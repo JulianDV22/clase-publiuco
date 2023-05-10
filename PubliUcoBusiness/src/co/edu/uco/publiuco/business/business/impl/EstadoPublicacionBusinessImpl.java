@@ -27,9 +27,9 @@ public class EstadoPublicacionBusinessImpl implements EscritorPublicacionBusines
 	public List<EscritorPublicacionDomain> list(EscritorPublicacionDomain domain) {
 		final EscritorPublicacionEntity entity = EscritorPublicacionAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<EscritorPublicacionEntity> result = daoFactory.getEscritorPublicacionDAO().read(entity);
+		List<EscritorPublicacionEntity> resultEntityList = daoFactory.getEscritorPublicacionDAO().read(entity);
 
-		return null;
+		return EscritorPublicacionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

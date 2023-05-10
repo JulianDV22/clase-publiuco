@@ -49,4 +49,11 @@ public final class EstadoTipoRelacionInstitucionAssembler implements
 
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<EstadoTipoRelacionInstitucionDTO> toDTOListFromDomainList(
+			List<EstadoTipoRelacionInstitucionDomain> domainList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

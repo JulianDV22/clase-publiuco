@@ -27,9 +27,9 @@ public class EscritorBusinessImpl implements EscritorBusiness {
 	public List<EscritorDomain> list(EscritorDomain domain) {
 		final EscritorEntity entity = EscritorAssembler.getInstance().toEntityFromDomain(domain);
 
-		final List<EscritorEntity> result = daoFactory.getEscritorDAO().read(entity);
+		List<EscritorEntity> resultEntityList = daoFactory.getEscritorDAO().read(entity);
 
-		return null;
+		return EscritorAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
 	}
 
 	@Override

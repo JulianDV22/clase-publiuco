@@ -1,5 +1,7 @@
 package co.edu.uco.publiuco.business.assembler.concrete;
 
+import java.util.List;
+
 import co.edu.uco.publiuco.business.assembler.Assembler;
 import co.edu.uco.publiuco.business.domain.TipoEscritorDomain;
 import co.edu.uco.publiuco.dto.TipoEscritorDTO;
@@ -40,6 +42,12 @@ public class TipoEscritorAssembler implements Assembler<TipoEscritorDomain, Tipo
 	public TipoEscritorDomain toDomainFromEntity(final TipoEscritorEntity entity) {
 		return new TipoEscritorDomain(entity.getIdentificador(), entity.getNombre(), entity.getDescripcion(),
 				EstadoTipoEscritorAssembler.getInstance().toDomainFromEntity(entity.getEstado()));
+	}
+
+	@Override
+	public List<TipoEscritorDomain> toDomainListFromEntityList(List<TipoEscritorEntity> entityList) {
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
 }

@@ -9,7 +9,7 @@ import co.edu.uco.publiuco.entities.EstadoPreferenciaEntity;
 
 public class EstadoPreferenciaAssembler
 		implements Assembler<EstadoPreferenciaDomain, EstadoPreferenciaDTO, EstadoPreferenciaEntity> {
-	
+
 	private static final Assembler<EstadoPreferenciaDomain, EstadoPreferenciaDTO, EstadoPreferenciaEntity> INSTANCE = new EstadoPreferenciaAssembler();
 
 	private EstadoPreferenciaAssembler() {
@@ -43,8 +43,8 @@ public class EstadoPreferenciaAssembler
 
 	@Override
 	public List<EstadoPreferenciaDomain> toDomainListFromEntityList(List<EstadoPreferenciaEntity> entityList) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
 }
