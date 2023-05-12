@@ -47,4 +47,9 @@ public class EstadoPreferenciaAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<EstadoPreferenciaDTO> toDTOListFromDomainList(List<EstadoPreferenciaDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

@@ -54,4 +54,9 @@ public class PalabraClavePublicacionAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<PalabraClavePublicacionDTO> toDTOListFromDomainList(List<PalabraClavePublicacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

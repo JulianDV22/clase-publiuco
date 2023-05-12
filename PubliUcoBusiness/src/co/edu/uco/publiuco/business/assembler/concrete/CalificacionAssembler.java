@@ -59,8 +59,7 @@ public class CalificacionAssembler implements Assembler<CalificacionDomain, Cali
 
 	@Override
 	public List<CalificacionDTO> toDTOListFromDomainList(List<CalificacionDomain> domainList) {
-		// TODO Auto-generated method stub
-		return null;
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
 	}
 
 }

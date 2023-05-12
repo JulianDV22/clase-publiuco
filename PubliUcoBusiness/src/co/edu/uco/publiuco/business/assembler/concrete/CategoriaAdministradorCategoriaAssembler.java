@@ -56,4 +56,10 @@ public class CategoriaAdministradorCategoriaAssembler implements
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<CategoriaAdministradorCategoriaDTO> toDTOListFromDomainList(
+			List<CategoriaAdministradorCategoriaDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

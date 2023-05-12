@@ -46,4 +46,9 @@ public class TipoRevisionAssembler implements Assembler<TipoRevisionDomain, Tipo
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<TipoRevisionDTO> toDTOListFromDomainList(List<TipoRevisionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

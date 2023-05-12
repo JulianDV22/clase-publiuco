@@ -48,4 +48,9 @@ public class EstadoComentarioLectorAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<EstadoComentarioLectorDTO> toDTOListFromDomainList(List<EstadoComentarioLectorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

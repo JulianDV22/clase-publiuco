@@ -54,4 +54,9 @@ public class CategoriaAssembler implements Assembler<CategoriaDomain, CategoriaD
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<CategoriaDTO> toDTOListFromDomainList(List<CategoriaDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

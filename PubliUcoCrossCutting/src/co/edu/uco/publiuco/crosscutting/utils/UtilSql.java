@@ -53,4 +53,28 @@ public class UtilSql {
 			throw PubliucoCrossCuttingException.create(technicalMessage, userMessage, exception);
 		}
 	}
+
+	public static final void initCommitIsReady(final Connection connection) {
+
+		try {
+			connectionIsOpen(connection);
+			if (connection.getAutoCommit()) {
+				var userMessage = UtilSqlMessages.COMMIT_IS_STARTED_USER_MESSAGE;
+				var technicalMessage = UtilSqlMessages.COMMIT_IS_STARTED_TECHNICAL_AUTOCOMMIT;
+				throw PubliucoCrossCuttingException.create(technicalMessage, userMessage);
+			}
+		} catch (PubliucoCrossCuttingException exception) {
+			throw exception;
+		} catch (SQLException exception) {
+			var userMessage = UtilSqlMessages.COMMIT_IS_STARTED_USER_MESSAGE;
+			var technicalMessage = UtilSqlMessages.COMMIT_IS_STARTED_TECHNICAL_SQL_EXCEPTION;
+
+			throw PubliucoCrossCuttingException.create(technicalMessage, userMessage, exception);
+		} catch (final Exception exception) {
+			var userMessage = UtilSqlMessages.COMMIT_IS_STARTED_USER_MESSAGE;
+			var technicalMessage = UtilSqlMessages.COMMIT_IS_STARTED_TECHNICAL_EXCEPTION;
+
+			throw PubliucoCrossCuttingException.create(userMessage, technicalMessage, exception);
+		}
+	}
 }

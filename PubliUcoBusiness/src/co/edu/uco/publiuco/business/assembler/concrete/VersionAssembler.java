@@ -65,4 +65,9 @@ public class VersionAssembler implements Assembler<VersionDomain, VersionDTO, Ve
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<VersionDTO> toDTOListFromDomainList(List<VersionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

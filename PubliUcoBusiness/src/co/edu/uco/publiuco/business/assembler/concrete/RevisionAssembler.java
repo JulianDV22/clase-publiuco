@@ -65,4 +65,9 @@ public class RevisionAssembler implements Assembler<RevisionDomain, RevisionDTO,
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<RevisionDTO> toDTOListFromDomainList(List<RevisionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

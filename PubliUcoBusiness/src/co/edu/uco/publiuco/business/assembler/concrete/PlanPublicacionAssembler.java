@@ -55,4 +55,9 @@ public class PlanPublicacionAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<PlanPublicacionDTO> toDTOListFromDomainList(List<PlanPublicacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

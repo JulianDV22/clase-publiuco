@@ -19,7 +19,7 @@ public final class EstadoTipoRelacionInstitucionFacadeImpl implements EstadoTipo
 	private final EstadoTipoRelacionInstitucionBusiness business;
 
 	public EstadoTipoRelacionInstitucionFacadeImpl() {
-		daoFactory = DAOFactory.getFactory(Factory.SQLSERVER);
+		daoFactory = DAOFactory.getFactory(Factory.POSTGRESQL);
 		business = new EstadoTipoRelacionInstitucionBusinessImpl(daoFactory);
 	}
 

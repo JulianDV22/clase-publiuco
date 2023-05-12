@@ -55,4 +55,9 @@ public class SuscripcionPublicacionAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<SuscripcionPublicacionDTO> toDTOListFromDomainList(List<SuscripcionPublicacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

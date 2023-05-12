@@ -47,4 +47,9 @@ public class EstadoPublicacionAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<EstadoPublicacionDTO> toDTOListFromDomainList(List<EstadoPublicacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

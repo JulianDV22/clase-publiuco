@@ -50,4 +50,9 @@ public class TipoEscritorAssembler implements Assembler<TipoEscritorDomain, Tipo
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<TipoEscritorDTO> toDTOListFromDomainList(List<TipoEscritorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

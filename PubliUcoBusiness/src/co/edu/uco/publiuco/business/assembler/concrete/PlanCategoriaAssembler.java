@@ -54,4 +54,9 @@ public class PlanCategoriaAssembler implements Assembler<PlanCategoriaDomain, Pl
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<PlanCategoriaDTO> toDTOListFromDomainList(List<PlanCategoriaDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

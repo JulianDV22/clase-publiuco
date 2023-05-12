@@ -59,4 +59,9 @@ public class ComentarioRevisorAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<ComentarioRevisorDTO> toDTOListFromDomainList(List<ComentarioRevisorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

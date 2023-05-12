@@ -46,4 +46,9 @@ public class EstadoPlanAssembler implements Assembler<EstadoPlanDomain, EstadoPl
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<EstadoPlanDTO> toDTOListFromDomainList(List<EstadoPlanDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

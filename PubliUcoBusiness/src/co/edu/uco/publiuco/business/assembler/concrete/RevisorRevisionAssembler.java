@@ -63,4 +63,9 @@ public class RevisorRevisionAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<RevisorRevisionDTO> toDTOListFromDomainList(List<RevisorRevisionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

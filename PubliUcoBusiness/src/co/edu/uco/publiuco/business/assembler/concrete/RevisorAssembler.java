@@ -80,4 +80,9 @@ public class RevisorAssembler implements Assembler<RevisorDomain, RevisorDTO, Re
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<RevisorDTO> toDTOListFromDomainList(List<RevisorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

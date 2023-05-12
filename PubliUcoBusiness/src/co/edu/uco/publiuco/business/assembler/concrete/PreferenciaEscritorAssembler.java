@@ -52,4 +52,9 @@ public class PreferenciaEscritorAssembler
 
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
+
+	@Override
+	public List<PreferenciaEscritorDTO> toDTOListFromDomainList(List<PreferenciaEscritorDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
 }

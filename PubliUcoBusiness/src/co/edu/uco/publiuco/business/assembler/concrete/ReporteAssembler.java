@@ -58,4 +58,9 @@ public class ReporteAssembler implements Assembler<ReporteDomain, ReporteDTO, Re
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<ReporteDTO> toDTOListFromDomainList(List<ReporteDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

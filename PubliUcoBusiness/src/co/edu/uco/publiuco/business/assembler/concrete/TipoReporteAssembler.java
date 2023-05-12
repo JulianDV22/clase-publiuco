@@ -46,4 +46,9 @@ public class TipoReporteAssembler implements Assembler<TipoReporteDomain, TipoRe
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<TipoReporteDTO> toDTOListFromDomainList(List<TipoReporteDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

@@ -56,4 +56,10 @@ public class HistorialAccesoPublicacionAssembler implements
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<HistorialAccesoPublicacionDTO> toDTOListFromDomainList(
+			List<HistorialAccesoPublicacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

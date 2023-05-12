@@ -60,4 +60,9 @@ public class PublicacionAssembler implements Assembler<PublicacionDomain, Public
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<PublicacionDTO> toDTOListFromDomainList(List<PublicacionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }

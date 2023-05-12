@@ -52,4 +52,9 @@ public final class TipoRelacionInstitucionAssembler
 		return entityList.stream().map(entity -> toDomainFromEntity(entity)).toList();
 	}
 
+	@Override
+	public List<TipoRelacionInstitucionDTO> toDTOListFromDomainList(List<TipoRelacionInstitucionDomain> domainList) {
+		return domainList.stream().map(domain -> toDTOFromDomain(domain)).toList();
+	}
+
 }
