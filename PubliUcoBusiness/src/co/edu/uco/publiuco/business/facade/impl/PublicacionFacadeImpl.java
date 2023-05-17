@@ -4,46 +4,120 @@ import java.util.List;
 
 import co.edu.uco.publiuco.business.assembler.concrete.PublicacionAssembler;
 import co.edu.uco.publiuco.business.business.PublicacionBusiness;
-import co.edu.uco.publiuco.business.domain.PublicacionDomain;
+import co.edu.uco.publiuco.business.business.impl.PublicacionBusinessImpl;
+import co.edu.uco.publiuco.business.facade.PublicacionFacade;
+import co.edu.uco.publiuco.crosscutting.exception.PubliucoBusinessException;
+import co.edu.uco.publiuco.crosscutting.exception.PubliucoException;
+import co.edu.uco.publiuco.crosscutting.utils.Messages.PublicacionFacadeImplMessages;
 import co.edu.uco.publiuco.data.dao.factory.DAOFactory;
-import co.edu.uco.publiuco.entities.PublicacionEntity;
+import co.edu.uco.publiuco.data.dao.factory.Factory;
+import co.edu.uco.publiuco.dto.PublicacionDTO;
 
-public class PublicacionFacadeImpl implements PublicacionBusiness {
+public class PublicacionFacadeImpl implements PublicacionFacade {
+	
+	private DAOFactory daoFactory;
+	private final PublicacionBusiness business;
 
-	DAOFactory daoFactory;
-
-	public PublicacionFacadeImpl(final DAOFactory daoFactory) {
-		this.daoFactory = daoFactory;
+	public PublicacionFacadeImpl() {
+		daoFactory = DAOFactory.getFactory(Factory.POSTGRESQL);
+		business = new PublicacionBusinessImpl(daoFactory);
 	}
 
 	@Override
-	public void register(PublicacionDomain domain) {
-		final PublicacionEntity entity = PublicacionAssembler.getInstance().toEntityFromDomain(domain);
-		daoFactory.getPublicacionDAO().create(entity);
+	public void register(PublicacionDTO dto) {
+		try {
 
+			final var domain = PublicacionAssembler.getInstance().toDomainFromDto(dto);
+
+			daoFactory.initTransaction();
+			business.register(domain);
+			daoFactory.commitTransaction();
+		} catch (PubliucoException exception) {
+			daoFactory.cancelTransaction();
+			throw exception;
+		} catch (Exception exception) {
+			daoFactory.cancelTransaction();
+
+			var userMessage = PublicacionFacadeImplMessages.REGISTER_EXCEPTION_USER_MESSAGE;
+			var technicalMessage = PublicacionFacadeImplMessages.REGISTER_EXCEPTION_TECHNICAL_MESSAGE;
+
+			throw PubliucoBusinessException.create(technicalMessage, userMessage, exception);
+		} finally {
+			daoFactory.closeConection();
+		}
+		
 	}
 
 	@Override
-	public List<PublicacionDomain> list(PublicacionDomain domain) {
-		final PublicacionEntity entity = PublicacionAssembler.getInstance().toEntityFromDomain(domain);
+	public List<PublicacionDTO> list(PublicacionDTO dto) {
+		try {
+			final var domain = PublicacionAssembler.getInstance().toDomainFromDto(dto);
+			final var returnDomainList = business.list(domain);
 
-		List<PublicacionEntity> resultEntityList = daoFactory.getPublicacionDAO().read(entity);
+			return PublicacionAssembler.getInstance().toDTOListFromDomainList(returnDomainList);
+		} catch (final PubliucoException exception) {
+			throw exception;
+		} catch (final Exception exception) {
+			var userMessage = PublicacionFacadeImplMessages.LIST_EXCEPTION_USER_MESSAGE;
+			var technicalMessage = PublicacionFacadeImplMessages.LIST_EXCEPTION_TECHNICAL_MESSAGE;
 
-		return PublicacionAssembler.getInstance().toDomainListFromEntityList(resultEntityList);
+			throw PubliucoBusinessException.create(technicalMessage, userMessage, exception);
+		} finally {
+			daoFactory.closeConection();
+		}
 	}
 
 	@Override
-	public void modify(PublicacionDomain domain) {
-		final PublicacionEntity entity = PublicacionAssembler.getInstance().toEntityFromDomain(domain);
-		daoFactory.getPublicacionDAO().update(entity);
+	public void modify(PublicacionDTO dto) {
+		try {
 
+			final var domain = PublicacionAssembler.getInstance().toDomainFromDto(dto);
+
+			daoFactory.initTransaction();
+			business.modify(domain);
+			daoFactory.commitTransaction();
+		} catch (PubliucoException exception) {
+			daoFactory.cancelTransaction();
+			throw exception;
+		} catch (Exception exception) {
+			daoFactory.cancelTransaction();
+
+			var userMessage = PublicacionFacadeImplMessages.MODIFY_EXCEPTION_USER_MESSAGE;
+			var technicalMessage = PublicacionFacadeImplMessages.MODIFY_EXCEPTION_TECHNICAL_MESSAGE;
+
+			throw PubliucoBusinessException.create(technicalMessage, userMessage, exception);
+		} finally {
+			daoFactory.closeConection();
+		}
+
+		
 	}
 
 	@Override
-	public void drop(PublicacionDomain domain) {
-		final PublicacionEntity entity = PublicacionAssembler.getInstance().toEntityFromDomain(domain);
-		daoFactory.getPublicacionDAO().delete(entity);
+	public void drop(PublicacionDTO dto) {
+		try {
 
+			final var domain = PublicacionAssembler.getInstance().toDomainFromDto(dto);
+
+			daoFactory.initTransaction();
+			business.drop(domain);
+			daoFactory.commitTransaction();
+		} catch (PubliucoException exception) {
+			daoFactory.cancelTransaction();
+			throw exception;
+		} catch (Exception exception) {
+			daoFactory.cancelTransaction();
+
+			var userMessage = PublicacionFacadeImplMessages.DROP_EXCEPTION_USER_MESSAGE;
+			var technicalMessage = PublicacionFacadeImplMessages.DROP_EXCEPTION_TECHNICAL_MESSAGE;
+
+			throw PubliucoBusinessException.create(technicalMessage, userMessage, exception);
+		} finally {
+			daoFactory.closeConection();
+		}
+		
 	}
+
+	
 
 }
