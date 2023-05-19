@@ -79,4 +79,28 @@ public final class TipoRelacionInstitucionSqlServerDAO extends SqlDAO implements
 
 	}
 
+	@Override
+	protected String prepareSelect() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected String prepareFrom() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected String prepareWhere(Object entity, List parameters) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected String prepareOrderBy() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
