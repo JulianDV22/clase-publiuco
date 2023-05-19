@@ -807,5 +807,20 @@ public final class Messages {
 
 	}
 	
+	public static final class LectorValidationMessages {
+
+		private LectorValidationMessages() {
+		}
+
+		public static final String GENERAL = "No es posible registrar un nuevo lector con los datos ingresados";
+		public static final String IDENTIFICADOR_IS_NULL = "No es posible continuar con el identificador del lector vacio";
+		public static final String IDENTIFICADOR_IS_DEFAULT = "No es posible tener el identificador por defecto del lector";
+		public static final String NOMBRE_IS_NULL = "No es posible continuar con el nombre del lector vacio";
+		public static final String NOMBRE_IS_DEFAULT = "No es posible tener el nombre por defecto del lector";
+		public static final String DESCRIPCION_IS_NULL = "No es posible continuar con la descrpcion del lector vacio";
+		public static final String DESCRIPCION_IS_DEFAULT = "No es posible tener la descripcion por defecto del lector";
+
+	}
+	
 
 }

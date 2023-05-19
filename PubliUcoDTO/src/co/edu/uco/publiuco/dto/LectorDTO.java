@@ -26,8 +26,8 @@ public final class LectorDTO {
 	public LectorDTO() {
 		super();
 		setIdentificador(UtilUUID.DEFAULT_UUID);
-		setTipoIdentificacion(TipoIdentificacionDTO.create());;
-		setNumeroIdentificacion(UtilText.EMPTY);;
+		setTipoIdentificacion(TipoIdentificacionDTO.create());
+		setNumeroIdentificacion(UtilText.EMPTY);
 		setPrimerNombre(UtilText.EMPTY);
 		setSegundoNombre(UtilText.EMPTY);
 		setPrimerApellido(UtilText.EMPTY);
