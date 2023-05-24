@@ -63,7 +63,7 @@ public final class EstadoTipoRelacionInstitucionSqlServerDAO extends SqlDAO<Esta
 		try (var preparedStatement = getConnection().prepareStatement(sqlStatement.toString())) {
 
 			setParameters(preparedStatement, parameters);
-			
+
 			return executeQuery(preparedStatement);
 
 		} catch (final PubliucoException exception) {
@@ -154,14 +154,14 @@ public final class EstadoTipoRelacionInstitucionSqlServerDAO extends SqlDAO<Esta
 	protected List<EstadoTipoRelacionInstitucionEntity> executeQuery(PreparedStatement preparedStatement) {
 
 		final List<EstadoTipoRelacionInstitucionEntity> result = new ArrayList<>();
-		
+
 		try (var resultSet = preparedStatement.executeQuery()) {
 
 			while (resultSet.next()) {
 				var entityTmp = new EstadoTipoRelacionInstitucionEntity(
 						resultSet.getObject("identificador", UUID.class), resultSet.getString("nombre"),
 						resultSet.getString("descripcion"));
-				
+
 				result.add(entityTmp);
 			}
 

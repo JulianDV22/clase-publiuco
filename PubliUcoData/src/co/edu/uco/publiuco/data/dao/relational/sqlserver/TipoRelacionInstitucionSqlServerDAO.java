@@ -10,7 +10,8 @@ import co.edu.uco.publiuco.data.dao.TipoRelacionInstitucionDAO;
 import co.edu.uco.publiuco.data.dao.relational.SqlDAO;
 import co.edu.uco.publiuco.entities.TipoRelacionInstitucionEntity;
 
-public final class TipoRelacionInstitucionSqlServerDAO extends SqlDAO implements TipoRelacionInstitucionDAO {
+public final class TipoRelacionInstitucionSqlServerDAO extends SqlDAO<TipoRelacionInstitucionEntity>
+		implements TipoRelacionInstitucionDAO {
 
 	public TipoRelacionInstitucionSqlServerDAO(final Connection connection) {
 		super(connection);
@@ -18,7 +19,28 @@ public final class TipoRelacionInstitucionSqlServerDAO extends SqlDAO implements
 
 	@Override
 	public final void create(final TipoRelacionInstitucionEntity entity) {
-		// TODO Auto-generated method stub
+		var sqlStatement = "INSERT INTO TipoRelacionInstitucion(identificador, nombre, descripcion, estado) VALUES (?,?,?,?)";
+
+		try (var PreparedStatement = getConnection().prepareStatement(sqlStatement)) {
+
+			PreparedStatement.setObject(1, entity.getIdentificador());
+			PreparedStatement.setString(2, entity.getNombre());
+			PreparedStatement.setString(3, entity.getDescripcion());
+
+			PreparedStatement.executeUpdate();
+
+		} catch (SQLException exception) {
+			var userMessage = "Se ha presentado un problema tratando de registrar la informacion del nuevo estado de tipo relacion institucion";
+			var technicalMessage = "Se ha presentado un problema de tipo SQLException dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+			throw PubliucoDataException.create(technicalMessage, userMessage, exception);
+		} catch (Exception exception) {
+			var userMessage = "Se ha presentado un problema inesperado tratando de registrar la informacion del nuevo estado de tipo relacion institucion";
+			var technicalMessage = "Se ha presentado un problema inesperadp dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+			throw PubliucoDataException.create(technicalMessage, userMessage, exception);
+
+		}
 
 	}
 
@@ -93,7 +115,7 @@ public final class TipoRelacionInstitucionSqlServerDAO extends SqlDAO implements
 	}
 
 	@Override
-	protected String prepareWhere(Object entity, List parameters) {
+	protected String prepareWhere(TipoRelacionInstitucionEntity entity, List<Object> parameters) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -105,13 +127,13 @@ public final class TipoRelacionInstitucionSqlServerDAO extends SqlDAO implements
 	}
 
 	@Override
-	protected void setParameters(PreparedStatement preparedStatement, List parameters) {
+	protected void setParameters(PreparedStatement preparedStatement, List<Object> parameters) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	protected List executeQuery(PreparedStatement preparedStatement) {
+	protected List<TipoRelacionInstitucionEntity> executeQuery(PreparedStatement preparedStatement) {
 		// TODO Auto-generated method stub
 		return null;
 	}
