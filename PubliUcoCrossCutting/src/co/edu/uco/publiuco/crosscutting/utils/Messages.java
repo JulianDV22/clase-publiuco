@@ -935,4 +935,60 @@ public final class Messages {
 
 	}
 
+	public static final class EstadoTipoRelacionInstitucionSqlServerDAOMessages {
+
+		private EstadoTipoRelacionInstitucionSqlServerDAOMessages() {
+		}
+
+		public static final String CREATE_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de registrar la informacion del nuevo estado de tipo relacion institucion";
+		public static final String CREATE_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String CREATE_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de registrar la informacion del nuevo estado de tipo relacion institucion";
+		public static final String CREATE_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo create de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String READ_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del estado de tipo relacion institucion";
+		public static final String READ_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo read de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String READ_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo estado de tipo relacion institucion";
+		public static final String READ_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo executeQuery de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String SET_PARAMETERS_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del estado de tipo relacion institucion";
+		public static final String SET_PARAMETERS_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo read de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String SET_PARAMETERS_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo estado de tipo relacion institucion";
+		public static final String SET_PARAMETERS_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo read de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String EXECUTE_QUERY_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del estado de tipo relacion institucion";
+		public static final String EXECUTE_QUERY_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo executeQuery de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String EXECUTE_QUERY_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo estado de tipo relacion institucion";
+		public static final String EXECUTE_QUERY_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo executeQuery de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+	}
+
+	public static final class TipoRelacionInstitucionSqlServerDAOMessages {
+
+		private TipoRelacionInstitucionSqlServerDAOMessages() {
+		}
+
+		public static final String CREATE_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de registrar la informacion del nuevo tipo relacion institucion";
+		public static final String CREATE_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo create de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String CREATE_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de registrar la informacion del nuevo tipo relacion institucion";
+		public static final String CREATE_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo create de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String READ_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del tipo relacion institucion";
+		public static final String READ_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo read de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String READ_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo tipo relacion institucion";
+		public static final String READ_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo executeQuery de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String UPDATE_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de actualizar la informacion del tipo relacion institucion";
+		public static final String UPDATE_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo update de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String UPDATE_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de actualizar la informacion del nuevo tipo relacion institucion";
+		public static final String UPDATE_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperado dentro del metodo actualizar de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String DELETE_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de eliminar la informacion del tipo relacion institucion";
+		public static final String DELETE_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo delete de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String DELETE_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de eliminar la informacion del nuevo tipo relacion institucion";
+		public static final String DELETE_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperado dentro del metodo delete de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String SET_PARAMETERS_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del tipo relacion institucion";
+		public static final String SET_PARAMETERS_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo read de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String SET_PARAMETERS_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo tipo relacion institucion";
+		public static final String SET_PARAMETERS_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo read de la clase EstadoTipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String EXECUTE_QUERY_SQL_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema tratando de consultar la informacion del estado de tipo relacion institucion";
+		public static final String EXECUTE_QUERY_SQL_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema de tipo SQLException dentro del metodo executeQuery de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+		public static final String EXECUTE_QUERY_EXCEPTION_USER_MESSAGE = "Se ha presentado un problema inesperado tratando de consultar la informacion del nuevo tipo relacion institucion";
+		public static final String EXECUTE_QUERY_EXCEPTION_TECHNICAL_MESSAGE = "Se ha presentado un problema inesperadp dentro del metodo executeQuery de la clase TipoRelacionInstitucionSqlServerDAO. Por favor revise la traza completa del error";
+
+	}
+
 }
